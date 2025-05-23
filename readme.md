@@ -9,34 +9,34 @@
 
 #### El menu, donde podremos navegar del indice al lugar de la creacion de la factura.
 
-![alt text](image-1.png)
+![alt text](img/image-1.png)
 
 ---
 
 #### Luego tenemos el lugar donde se veran los nuevos datos ingresados y los viejos, que estan guardados en la base de datos.
-![alt text](image-2.png)
+![alt text](img/image-2.png)
 
 ---
 
 #### Y luego tenemos el lugar donde se crean las nuevas facturas
-![alt text](image-3.png)
+![alt text](img/image-3.png)
 
 ##### Para comprobar que se añadio
-![alt text](image-4.png)
+![alt text](img/image-4.png)
 
 ---
 
 ## Ahora veremos con se obtiene el reporte
 
 #### Primero debemos descargar la libreria que se nos haga mas comoda usar, que en mi caso fue fpdf. Luego de decidir la libreria a usar la descargamos y la metemos en nuestro proyecto
-![alt text](image-6.png)
-![alt text](image-7.png)
+![alt text](img/image-6.png)
+![alt text](img/image-7.png)
 
 ---
 
 #### Luego de hacer esto debemos crear el boton que vimos al principio en el indice, el cual se encargara de crear el formulario, pero este boton no trabaja solo, tiene una logica por detras, que en mi caso la llame generar_facturas_pdf:
 
-![alt text](image-8.png)
+![alt text](img/image-8.png)
 
 #### Ahora debemos que hacer la logica que va detras del ese simple boton que esta en nuestro indice:
 
@@ -86,7 +86,7 @@ $pdf->Output();
 
 #### Este codigo lo que hace basicamente es que, llama a la libreria descargada, y luego de llamar a nuestros campos para que aparezcan en un tabla ordenada, y todo al final se vea en un pdf horizontal, tpdo esto luego de, obviamente, incluir la conexion para que no hayan confusiones, y tambien luego de haber hecho la query *select * from*
 
-![alt text](image-5.png)
+![alt text](img/image-5.png)
 
 ---
 
@@ -96,8 +96,8 @@ $pdf->Output();
 
 #### Primero que todo debemos, hacer nuestra conexion con nuestra base de datos, que, en mi caso, es la misma que la de php. Suponiendo que ya hemos hecho lo mas basico del CRUD con nuestro formulario funcionar y todo, ahora vamos a incluir algo nuevo, un boton para imprimir nuestro reportes.
 
-![alt text](image-9.png)
-![alt text](image-10.png)
+![alt text](img/image-9.png)
+![alt text](img/image-10.png)
 
 #### Comenzemos antes que nada creando nuestro boton, que lo llamaremos Imprimir, y en mi caso por cuestiones de comodidad en cuando tengamos que llamarlo le pondremos el nombre de *btnimprimir*.
 
@@ -111,7 +111,7 @@ $pdf->Output();
 
 #### Al terminar de añadir todo tendra que darle diseño para que sea mas vicible, este seria poniendole un titulo al reporte, esto se hace con click derecho en espacio en blanco y añadir encabezado, en el encabezado tendra que poner un text box, para luego poner el titulo, y luego de darle click izquierdo a la tabla dentro de ella, arriba podra darle formato, para que al final quede algo como esto:
 
-![alt text](image-11.png)
+![alt text](img/image-11.png)
 
 #### Ya despues de terminar de esto, tendra que ir a codificar, ira a su frmreporte.cs para hacer que cuando le de al boton imprimir lo mande a frmreporte y cuando esto pase en el load del formulario, ahi se cargue el informe que seria lo que hicimos mas arriba, esto se veria de esta forma:
 
@@ -147,7 +147,7 @@ private void btnImprimir_Click(object sender, EventArgs e)
      
 ```
 #### Para que al final todo se vea de esta forma
-![alt text](image-12.png)
+![alt text](img/image-12.png)
 
 #### Y en Pdf:
-![alt text](image-13.png)
+![alt text](img/image-13.png)
